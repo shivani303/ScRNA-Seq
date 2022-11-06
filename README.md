@@ -185,5 +185,12 @@ DimPlot(leukemia, reduction = "umap", label = T,repel = T,pt.size = 0.5) +NoLege
 
 ![image](https://user-images.githubusercontent.com/66779651/200187085-8a1e1ad9-97b6-4bef-8d08-9345a34fbd43.png)
 
+#INTERPRETATION
+single cell RNA-seq (scRNA-seq) has become widely used for transcriptome analysis in many areas of biology. In contrast to bulk RNA-seq, scRNA-seq provides quantitative measurements of the expression of every gene in a single cell. 
+Analyze Gene expression profile at single-cell level of hematopoietic stem and progenitor cells (HSPCs) from individuals with chronic myelomonocytic leukemia (CMML).
+Expression of top 20 genes in 10 clusters are higher in cells like Astrocyte, B_cell, Macrophage,  Fibroblasts, Platelets, Smooth_muscle_cells, T_cells, Tissue_stem_cells.
+
+
+
 
 
