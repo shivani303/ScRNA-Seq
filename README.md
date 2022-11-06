@@ -123,9 +123,22 @@ leukemia.markers = FindAllMarkers(leukemia, only.pos = TRUE, min.pct = 0.25, log
 head(leukemia.markers)
 
 a = leukemia.markers %>% group_by(cluster) %>% top_n(n = 2, wt = avg_log2FC)
+
 a
 genes = a %>% pull(gene)
+
 genes
+
+FeaturePlot(leukemia, features = genes[1:5])
+
+![image](https://user-images.githubusercontent.com/66779651/200188165-53e8d114-5b28-44c7-a462-1e505135fba9.png)
+
+**last top 6 gene**
+
+FeaturePlot(leukemia, features = genes[15:20])
+
+![image](https://user-images.githubusercontent.com/66779651/200188265-ab70c047-e52f-4a05-b10c-055b42307ca4.png)
+
 
 # CELL TYPE IDENTIFICATION
 library(celldex)
@@ -171,5 +184,6 @@ DimPlot(leukemia, label = T , repel = T, label.size = 3) + NoLegend()
 DimPlot(leukemia, reduction = "umap", label = T,repel = T,pt.size = 0.5) +NoLegend()
 
 ![image](https://user-images.githubusercontent.com/66779651/200187085-8a1e1ad9-97b6-4bef-8d08-9345a34fbd43.png)
+
 
 
